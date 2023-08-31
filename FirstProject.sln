@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alchemy", "Alchemy\Alchemy.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alchemy.Test", "Alchemy.Test\Alchemy.Test.csproj", "{823DACD0-ACD9-4CBD-A67A-5087B56F549D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotWantedLeague", "RobotWantedLeague\RobotWantedLeague.csproj", "{96F9C8AC-0135-404B-849A-E3B5B9E76018}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotWantedLeague.Test", "RobotWantedLeague.Test\RobotWantedLeague.Test.csproj", "{71492370-E78C-48EC-99A1-90B9C8095C8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +46,13 @@ Global
 		{823DACD0-ACD9-4CBD-A67A-5087B56F549D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{823DACD0-ACD9-4CBD-A67A-5087B56F549D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{823DACD0-ACD9-4CBD-A67A-5087B56F549D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96F9C8AC-0135-404B-849A-E3B5B9E76018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F9C8AC-0135-404B-849A-E3B5B9E76018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F9C8AC-0135-404B-849A-E3B5B9E76018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F9C8AC-0135-404B-849A-E3B5B9E76018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71492370-E78C-48EC-99A1-90B9C8095C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71492370-E78C-48EC-99A1-90B9C8095C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71492370-E78C-48EC-99A1-90B9C8095C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71492370-E78C-48EC-99A1-90B9C8095C8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
