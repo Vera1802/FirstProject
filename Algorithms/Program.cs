@@ -149,8 +149,20 @@
 //     }
 // }
 
-namespace Algorithms;
-public class EntryPoint {
-public static void Main(string[] args ){}
+// namespace Algorithms;
+// class Moyenne {
+// public static void Main(string[] args )
+// {
+//     List<double> lst = new List<double> { 5.5, 10.0, 7.2, 3.8, 9.6 };
+// try
+//             {
+//                 double moyenne = Moyenne.CalculateMoyenne(lst);
+//                 Console.WriteLine($"La moyenne est : {moyenne}");
+//             }
+//             catch (ArgumentException ex)
+//             {
+//                 Console.WriteLine($"Erreur : {ex.Message}");
+//             }
+// }
 
-}
+// }
