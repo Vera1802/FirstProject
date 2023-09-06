@@ -115,7 +115,7 @@
 
 //     }
 
- 
+
 //     public double Y()
 
 //     {
@@ -139,7 +139,9 @@
 
 
 
-// class EntryPoint{
+using Algorithms;
+
+class Program{
 
 
 //     public static void Main(String[] args){
@@ -149,20 +151,17 @@
 //     }
 // }
 
-// namespace Algorithms;
-// class Moyenne {
-// public static void Main(string[] args )
-// {
-//     List<double> lst = new List<double> { 5.5, 10.0, 7.2, 3.8, 9.6 };
-// try
-//             {
-//                 double moyenne = Moyenne.CalculateMoyenne(lst);
-//                 Console.WriteLine($"La moyenne est : {moyenne}");
-//             }
-//             catch (ArgumentException ex)
-//             {
-//                 Console.WriteLine($"Erreur : {ex.Message}");
-//             }
-// }
 
-// }
+public static void Main(string[] args )
+{
+    //Moyenne moyenne = new Moyenne();
+    // List<double> lst = new List<double> { 5, 10, 6 };
+    // double moyenneCalculee = Moyenne.CalculateMoyenne(lst);
+    // Console.WriteLine($"La moyenne est : {moyenneCalculee}");
+    // Console.WriteLine(Math.Cos(0));       
+    int height = 5;
+    int width = 7;  
+    string staircase = AsciiArt.CreateStaircase(height, width);
+    Console.WriteLine(staircase);        
+}
+}
