@@ -161,7 +161,7 @@ public static void Main(string[] args )
     // Console.WriteLine(Math.Cos(0));       
     int height = 5;
     int width = 7;  
-    string staircase = AsciiArt.CreateStaircase(height, width);
+    string staircase = CreateStaircase(height, width);
     Console.WriteLine(staircase);        
 }
 }
