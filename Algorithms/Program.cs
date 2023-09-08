@@ -159,9 +159,9 @@ public static void Main(string[] args )
     // double moyenneCalculee = Moyenne.CalculateMoyenne(lst);
     // Console.WriteLine($"La moyenne est : {moyenneCalculee}");
     // Console.WriteLine(Math.Cos(0));       
-    int height = 5;
-    int width = 7;  
-    string staircase = CreateStaircase(height, width);
-    Console.WriteLine(staircase);        
+    // int height = 5;
+    // int width = 7;  
+    // string staircase = CreateStaircase(height, width);
+    // Console.WriteLine(staircase);        
 }
 }
