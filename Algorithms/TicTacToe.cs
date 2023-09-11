@@ -5,7 +5,8 @@ using System;
 public enum Player
 {
     X,
-    O
+    O,
+    Empty
 }
 public enum SquareState
 {
@@ -50,6 +51,7 @@ public class TicTacToe
         }
     }
 
+
     
     public Player GetCurrentPlayer()
     {
@@ -60,69 +62,81 @@ public class TicTacToe
     public bool IsGameOver(out Player winner)
     {
         
-        winner = Player.X; 
-        return false; 
+        winner = TheWinnerIs();
+
+    // Check for a draw
+    if (winner == Player.Empty)
+    {
+        for (int row = 0; row < 3; row++)
+        {
+            for (int col = 0; col < 3; col++)
+            {
+                if (board[row, col] == SquareState.Empty)
+                    return false; 
+            }
+        }
     }
+    return true;
+}
     public Player TheWinnerIs()
     {
         
         for (int i = 0; i < 3; i++)
-        {
-            if (board[i, 0] == SquareState.X && board[i, 1] == SquareState.X && board[i, 2] == SquareState.X)
-                return Player.X; 
-            if (board[i, 0] == SquareState.O && board[i, 1] == SquareState.O && board[i, 2] == SquareState.O)
-                return Player.O; 
-        }
-
-        
-        for (int i = 0; i < 3; i++)
-        {
-            if (board[0, i] == SquareState.X && board[1, i] == SquareState.X && board[2, i] == SquareState.X)
-                return Player.X; 
-            if (board[0, i] == SquareState.O && board[1, i] == SquareState.O && board[2, i] == SquareState.O)
-                return Player.O; 
-        }
-
-        
-        if (board[0, 0] == SquareState.X && board[1, 1] == SquareState.X && board[2, 2] == SquareState.X ||
-            board[0, 2] == SquareState.X && board[1, 1] == SquareState.X && board[2, 0] == SquareState.X)
-            return Player.X; 
-
-        if (board[0, 0] == SquareState.O && board[1, 1] == SquareState.O && board[2, 2] == SquareState.O ||
-            board[0, 2] == SquareState.O && board[1, 1] == SquareState.O && board[2, 0] == SquareState.O)
-            return Player.O; 
-        return Player.X; 
+    {
+        if (board[i, 0] == SquareState.X && board[i, 1] == SquareState.X && board[i, 2] == SquareState.X)
+            return Player.X;
+        if (board[i, 0] == SquareState.O && board[i, 1] == SquareState.O && board[i, 2] == SquareState.O)
+            return Player.O;
     }
 
-    // static void Main(string[] args)
-    // {
-    //     TicTacToe game = new TicTacToe();
-    //     Player winner = Player.X; 
+    for (int i = 0; i < 3; i++)
+    {
+        if (board[0, i] == SquareState.X && board[1, i] == SquareState.X && board[2, i] == SquareState.X)
+            return Player.X;
+        if (board[0, i] == SquareState.O && board[1, i] == SquareState.O && board[2, i] == SquareState.O)
+            return Player.O;
+    }
 
-    //     while (winner == Player.X)
-    //     {
-    //         Console.Clear();
-    //         Console.WriteLine("Joueur X, c'est votre tour.");
-    //         PrintBoard(game);
+    if (board[0, 0] == SquareState.X && board[1, 1] == SquareState.X && board[2, 2] == SquareState.X ||
+        board[0, 2] == SquareState.X && board[1, 1] == SquareState.X && board[2, 0] == SquareState.X)
+        return Player.X;
 
-            //int row, col;
-            //GetMove(out row, out col);
+    if (board[0, 0] == SquareState.O && board[1, 1] == SquareState.O && board[2, 2] == SquareState.O ||
+        board[0, 2] == SquareState.O && board[1, 1] == SquareState.O && board[2, 0] == SquareState.O)
+        return Player.O;
 
-            //game.XPlay(row, col);
-//             winner = game.TheWinnerIs();
-//         }
+    
+    return Player.Empty;
 
-//         Console.Clear();
-//         PrintBoard(game);
-//         Console.WriteLine($"Le joueur {winner} a gagné !");
-//     }
+    }
 
-//     static void PrintBoard(TicTacToe game)
-//     {
-//         // Afficher le tableau de jeu ici
-//     }
+    static void Main(string[] args)
+    {
+        TicTacToe game = new TicTacToe();
+        Player winner = Player.X; 
 
-//     //static void GetMove(out int row, out int col)
+        while (winner == Player.X)
+        {
+            Console.Clear();
+            Console.WriteLine("Joueur X, c'est votre tour.");
+            PrintBoard(game);
+
+            int row, col;
+            GetMove(out row, out col);
+
+            game.XPlay(row, col);
+            winner = game.TheWinnerIs();
+        }
+
+        Console.Clear();
+        PrintBoard(game);
+        Console.WriteLine($"Le joueur {winner} a gagné !");
+    }
+
+    static void PrintBoard(TicTacToe game)
+    {
+        // Afficher le tableau de jeu ici
+    }
     
 }
 
